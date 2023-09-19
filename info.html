@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="info_styles.css">
+    <link rel="stylesheet" type="text/css" href="index_styles.css">
+</head>
+
+<body>
+    <a class="back-button btn" onclick="javascript:history.back()">BACK</a>
+
+    <h2 class="main-header">
+        INFO
+    </h2>
+
+    <main class="info-main">
+        <div class="info-text-container">
+            <h3>General</h3>
+            <p>
+                This webpage is designed for an Undergraduate Research Opportunity Program (UROP) and is intended
+                as a final project. The project supervisor is Pimenta Soraia and the UROP was a part of the meComposites
+                group in the Mechanical Engineering Department at Imperial.
+                <br><br>
+                The application is built so that carbon fibre data may be analysed and smaller, easier to model regions
+                can be extracted, with the intent to then send the sample data to a simulation. The data is analysed
+                with
+                key metrics: fibre misalignment, tortuosity (overall waviness), max local tortuosity (local waviness)
+                and
+                the fibre volume fraction, with the hope that samples with known metrics can be modelled against each
+                other
+                and the effect that the metrics have on the strength of the carbon fibre accurately measured.
+            </p>
+        </div>
+        <div class="info-text-container">
+            <h3>Usage</h3>
+            <p>
+                To start, the fibre data must be a csv file (or .txt file in csv format) consisting of 4 columns, [x y z
+                fibreIndex]
+                and N rows (N being the number of datapoints). The fibre index simply gives an indication to which fibre
+                the
+                given x y z values belong too. The data must correspond to the coordinates of the centres of the fibres
+                at
+                given slices through the sample.
+                <br><br>
+                To use, first select your chosen .csv or .txt file in the file selector. Then once it has uploaded to
+                the
+                page, wait for the program to analyse your data and display it on the adjacent canvas. Once completed
+                you
+                can then select on the sliders what you want the program to attempt to optimise it's search for.
+                After selecting a runtime in seconds, you can then press the 'Run Search' button. This will trigger the
+                program to start randomly searching the main sample. After every search, if the sample it has just
+                selected
+                has a higher 'evaluation', then the previous sample is replaced by the new sample, and then displayed on
+                the canvas.
+                <br><br>
+                The sliders work in terms of percentile, i.e selecting a value of 50% will optimise the search for a
+                sample
+                with that given metric in the 50th percentile in terms of the main sample. The output is a cylinder of
+                data, filtered from the main sample, with the specified radius and height. Note that the sample
+                radius and height is in terms of the coordinates supplied in the main sample.
+                <br><br>
+                When you have found a suitable sample, or the timer has finished, you can then choose to run the search
+                again, starting with the data already saved in the page, or download the sample data.
+                The output of the download will be a .csv file in the same format as the input file, except the first
+                row will contain metadata about the sample. The data is is the form [x y z radius height misalignment
+                average-tortuosity max-tortuosity fiber-volume-fraction]. The x y z coordinates represent the centre of
+                the bottom face of the containing cylinder, and all of the associated metrics are averages of the sample
+                data.
+            </p>
+        </div>
+        <div class="info-text-container">
+            <h3>Other</h3>
+            <p>
+                This webpage was designed and is maintained by Riley Horrix, if any errors or bugs are found, please
+                don't hesitate to
+                contact riley@horrix.com.
+                <br><br>
+                The whole project is open source at (--github_link--) and you are free to copy and/or distribute as you
+                see fit.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>

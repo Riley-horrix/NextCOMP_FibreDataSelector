@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://evanplaice.github.io/jquery-csv/src/jquery.csv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.25.2.min.js" charset="utf-8"></script>
+
+    <script src="./scripts/global_vars.js"></script>
+    <script src="./scripts/index_scripts.js"></script>
+    <script src="./scripts/fibre_funcs.js"></script>
+    <script src="./scripts/misc_funcs.js"></script>
+
+    <script src="./scripts/selectedDataSketch.js"></script>
+    <script src="./scripts/visualisationSketch.js"></script>
+
+    <script src="./scripts/data_object.js"></script>
+    <script src="./scripts/metric_object.js"></script>
+    <link rel="stylesheet" type="text/css" href="index_styles.css">
+
+    <title>Fibre Path Selector</title>
+
+    <meta charset="utf-8" />
+</head>
+
+<body style="padding: 20px;">
+    <a href="info.html" class="info-and-usage btn">Information and Usage</a>
+    <br>
+    <br>
+    <div class="main-continer">
+        <!-- Section containing input panel and overall data visualisation -->
+        <div class="top-panel">
+            <!-- Input Panel -->
+            <div class="input-panel">
+                <!-- Title and file input selector -->
+                <div class="file-selector">
+                    <h4>Fibre Selector</h4>
+
+                    <!-- <span style="width: 40px"></span> -->
+
+                    <label for="fileupload">
+                        <p style="font-size: 10px;">Select csv file : </p>
+                        <input type="file" id="fileupload" name="fileupload" accept=".csv,.txt">
+                    </label>
+
+                </div>
+
+                <!-- Metric inputs -->
+                <div class="metric-inputs">
+                    <form target="blank_frame" name="metrics-1-form" onsubmit="displayMetrics1()">
+                        <div class="slider-menu" id="slider-menu-1">
+                            <h3 style="margin-left: 12px;">Selected Data 1</h3>
+                            <label class="metric-label">Time Allowed (s)</label>
+                            <div class="number-input">
+                                <input type="number" name="time-1" required>
+                            </div>
+                            <label class="metric-label">Misalignment</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="misalignment-1-check">
+                                <input type="range" min="0" max="100" value="10" class="slider"
+                                    name="misalignment-1-slider">
+                            </div>
+                            <label class="metric-label">Average Tortuosity</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="aveTort-1-check">
+                                <input type="range" min="0" max="100" value="10" class="slider" name="aveTort-1-slider">
+                            </div>
+                            <label class="metric-label">Max Local Tortuosity</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="maxTort-1-check">
+                                <input type="range" min="0" max="100" value="10" class="slider" name="maxTort-1-slider">
+                            </div>
+                            <label class="metric-label">Fibre Volume Fraction</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="fibreVol-1-check">
+                                <input type="range" min="0" max="100" value="10" class="slider"
+                                    name="fibreVol-1-slider">
+                            </div>
+                            <label class="metric-label">Sample Radius</label>
+                            <div class="number-input">
+                                <input type="number" name="radius-1" value="20" required>
+                            </div>
+                            <label class="metric-label">Sample Height</label>
+                            <div class="number-input">
+                                <input type="number" name="height-1" value="50" required>
+                            </div>
+                            <input class="submit-metrics btn" name="metrics-1" type="submit" value="Run Search">
+                            <p id="rerun-message-1" class="error-info"></p>
+                        </div>
+                    </form>
+                    <form target="blank_frame" name="metrics-2-form" onsubmit="displayMetrics2()">
+                        <div class="slider-menu" id="slider-menu-2">
+                            <h3 style="margin-left: 12px;">Selected Data 2</h3>
+                            <label class="metric-label">Time Allowed (s)</label>
+                            <div class="number-input">
+                                <input type="number" name="time-2" required>
+                            </div>
+                            <label class="metric-label">Misalignment</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="misalignment-2-check">
+                                <input type="range" min="0" max="100" value="10" class="slider"
+                                    name="misalignment-2-slider">
+                            </div>
+                            <label class="metric-label">Average Tortuosity</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="aveTort-2-check">
+                                <input type="range" min="0" max="100" value="10" class="slider" name="aveTort-2-slider">
+                            </div>
+                            <label class="metric-label">Max Local Tortuosity</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="maxTort-2-check">
+                                <input type="range" min="0" max="100" value="10" class="slider" name="maxTort-2-slider">
+                            </div>
+                            <label class="metric-label">Fibre Volume Fraction</label>
+                            <div class="slider-item">
+                                <input type="checkbox" name="fibreVol-2-check">
+                                <input type="range" min="0" max="100" value="10" class="slider"
+                                    name="fibreVol-2-slider">
+                            </div>
+                            <label class="metric-label">Sample Radius</label>
+                            <div class="number-input">
+                                <input type="number" name="radius-2" value="20" required>
+                            </div>
+                            <label class="metric-label">Sample Height</label>
+                            <div class="number-input">
+                                <input type="number" name="height-2" value="50" required>
+                            </div>
+                            <input class="submit-metrics btn" name="metrics-2" type="submit" value="Run Search">
+                            <p id="rerun-message-2" class="error-info"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="p5-header">
+                Whole Dataset Visualisation
+                <div id="visualisationCanvas" class="p5-canvas"></div>
+            </div>
+            <div class="main-data-graphs">
+                <div>
+                    <label for="mis-hist">Misalignment</label>
+                    <div id="mis-hist" style="width:300px;height:250px;"></div>
+                </div>
+                <div>
+                    <label for="tort-hist">Tortuosity</label>
+                    <div id="tort-hist" style="width:300px;height:250px;"></div>
+                </div>
+                <div>
+                    <label for="maxtort-hist">Max Tortuosity</label>
+                    <div id="maxtort-hist" style="width:300px;height:250px;"></div>
+                </div>
+                <div>
+                    <label for="vol-hist">Fibre Vol Frac</label>
+                    <div id="vol-hist" style="width:300px;height:250px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="flatten-samples" class="btn">Project Samples To XY Plane?</button>
+
+        <!-- Section containing two canvases to display selected data -->
+        <div class="horizontal-panel">
+            <div class="data-display">
+                <label class="p5-header">
+                    Selected Data 1
+                    <div id="selectedData1" class="p5-canvas"></div>
+                </label>
+
+                <!-- Section containing metrics for the first sample. -->
+                <div class="data-value-display">
+                    Misalignment :
+                    <p id="mis-disp-1">0</p>
+                    Ave Tortuosity :
+                    <p id="tort-disp-1">0</p>
+                    Max Local Tortuosity :
+                    <p id="maxtort-disp-1">0</p>
+                    Fibre Volume :
+                    <p id="fibrevol-disp-1">0</p>
+                    <button id="download-sample-1" class="btn"><i class="fa fa-download"></i> Download Sample
+                        1</button>
+                    <br>
+                    <button id="stop-search-1" class="btn">Stop Search</button>
+                    <br><br>
+                    Status =
+                    <br>
+                    <p id="status-1">IDLE</p>
+                </div>
+            </div>
+
+            <div class="data-display">
+                <label class="p5-header">
+                    Selected Data 2
+                    <div id="selectedData2" class="p5-canvas"></div>
+                </label>
+                <!-- Section containing metrics for the second sample. -->
+                <div class="data-value-display">
+                    Misalignment :
+                    <p id="mis-disp-2">0</p>
+                    Ave Tortuosity :
+                    <p id="tort-disp-2">0</p>
+                    Max Local Tortuosity :
+                    <p id="maxtort-disp-2">0</p>
+                    Fibre Volume :
+                    <p id="fibrevol-disp-2">0</p>
+                    <button id="download-sample-2" class="btn"><i class="fa fa-download"></i> Download Sample
+                        2</button>
+                    <br>
+                    <button id="stop-search-2" class="btn">Stop Search</button>
+                    <br><br>
+                    Status =
+                    <br>
+                    <p id="status-2">IDLE</p>
+                </div>
+            </div>
+
+        </div>
+        <iframe name="blank_frame" id="blank_frame" style="display: none;"></iframe>
+    </div>
+</body>
+
+</html>
+
+
+<!-- Things TODO : 
+
+    *   Fix grabbing the cylinder 
+    -   Check for fibre intersection and boundary touching within samples.
+    *   Add a stop condition, i.e search for 10 mins.
+    -   Add a sample prerequisite, i.e find 10 samples that best fit.
+    *   Add a download button to save the samples.
+    -   Add a fibre radius input.
+    *   Add a metric display for the main data.
+    *   Add a display for the samples 'actual' metrics and save them alongside the data in the file, as well 
+      -       as the cylinder position in x, y, z, radius, height, to give reference to where it can be found
+      -      in the original sample.
+    - Remove console debugs
+    - Tidy and commment code
+
+-->
