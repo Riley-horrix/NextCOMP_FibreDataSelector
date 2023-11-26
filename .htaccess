@@ -1,0 +1,6 @@
+SSLRequireSSL
+AuthType Basic
+AuthName "Please log in first : "
+AuthUserFile /homes/rh1122/public_html/NextCOMP_FibreDataSelector/.htpasswd
+Require valid-user
+Satisfy all

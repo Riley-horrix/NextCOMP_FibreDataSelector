@@ -1,3 +1,5 @@
+var CSVTXT = "";
+
 function isAPIAvailable() {
     // Check for the various File API support.
     if (window.File && window.FileReader && window.FileList && window.Blob) {
@@ -60,7 +62,45 @@ $(function () {
             item.redraw();
         })
     });
+
+    getExampleData();
 })
+
+
+function getExampleData() {
+
+  document.getElementById('example-data').value = "exdata not yet loaded...";
+
+  var file = "./exampleData/someData.csv";
+  var tempReader = new FileReader();
+
+  tempReader.onload = function (event) {
+    console.log(event);
+    document.getElementById('example-data').value = event.target.result;
+    CSVTXT = event.target.result;
+  }
+
+  $.get(file, function(data) {
+    var blob = new Blob([data], { type: 'text/csv' });
+    tempReader.readAsText(blob);
+  });
+/*
+  tempReader.readAsText(file);
+  tempReader.onload = function (event) {
+    console.log("I Am Here!");
+    console.log(event);
+    document.getElementById('example-data').value = event.target.result;
+  }
+*/
+}
+
+function submitData() {
+  if (CSVTXT === "") return;
+  let data = $.csv.toArrays(CSVTXT);
+  FIBRE_DATA_OBJECT = new FibreDataObject(data);
+  FIBRE_DATA_OBJECT.initAll();
+}
+
 
 // If the input file is changed, then send the event to this function to read the data
 // stored in the file, and save it to a global variable.

@@ -57,6 +57,11 @@ canvas {
     align-items: center;
 }
 
+.submit-csv {
+  height: 20px;
+  width: 20px;
+}
+
 /* Style buttons */
 .btn {
     background-color: DodgerBlue;

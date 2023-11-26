@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>NextCOMP</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link href="../../layout/styles/main.css" rel="stylesheet" type="text/css" media="all">
+	<!-- Scripts ################################################################################################ -->
+	<script src="../../layout/scripts/inclusive-menu-button.js"></script>
+	<script src="../../layout/scripts/inclusive-menu-button.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+		</script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+		integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous">
+		</script>
+	<script>
+		window.jQuery || document.write('<script src="layout/scripts/jquery-latest.min.js"><\/script>\
+	<script src="layout/scripts/jquery-ui.min.js"><\/script>')
+	</script>
+	<script>
+		jQuery(document).ready(function ($) { $('img').removeAttr('width height'); });
+	</script>
+
+
+	<script src="../../layout/scripts/jquery-mobilemenu.min.js"></script>
+	<script src="../../layout/scripts/custom.js"></script>
+	<script src="../../layout/scripts/java-for-videos.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-2.25.2.min.js" charset="utf-8"></script>
+
+	<script src="./scripts/lib/ajax_jquery.js"></script>
+	<script src="./scripts/lib/jquery_csv.js"></script>
+
+	<script src="./scripts/global_vars.js"></script>
+	<script src="./scripts/index_scripts.js"></script>
+	<script src="./scripts/fibre_funcs.js"></script>
+	<script src="./scripts/misc_funcs.js"></script>
+
+	<script src="./scripts/selectedDataSketch.js"></script>
+	<script src="./scripts/visualisationSketch.js"></script>
+
+	<script src="./scripts/data_object.js"></script>
+	<script src="./scripts/metric_object.js"></script>
+	<link rel="stylesheet" type="text/css" href="index_styles.css">
+
+
+
+	<a id="backtotop" href="#top" aria-label="Return to the top of the page" style="bottom:60px; right:15px;"><i
+			class="fa fa-chevron-up"></i></a>
+	<script src="https://cmp.osano.com/16CVybSoGUTjz1LUI/81c429f0-7730-4158-8bf1-368c06136916/osano.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QM1XRX6K0Y"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-QM1XRX6K0Y',);
+	</script>
+	<!--[if lt IE 9]>
+<link href="layout/styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="layout/scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="layout/scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<!-- Banner ################################################################################################ -->
+	<div class="wrapper row1">
+		<header id="header" class="full_width clear">
+			<div id="hgroup">
+				<a href="../../index.html"><img class="imglogo" src="../../images/logos/nextcomp-w.png"
+						alt="NextCOMP Homepage"></img></a>
+			</div>
+			<div id="header-contact">
+				<ul class="list none">
+					<li><a href="mailto:info@nextcomp.ac.uk" aria-label="Contact NextCOMP"><span
+								class="icon-envelope"></span></a></li>
+					<li><a href="https://twitter.com/NextCOMP_ac_uk" target="_blank" aria-label="Tweet NextCOMP"><span
+								class="icon-twitter"></span></a></li>
+					<li><a href="https://www.linkedin.com/groups/8968232" target="_blank"
+							aria-label="LinkedIn NextCOMP"><span class="icon-linkedin"></span></a></li>
+				</ul>
+			</div>
+		</header>
+	</div>
+
+	<!-- Navagation ################################################################################################ -->
+	<div class="wrapper row2">
+		<nav>
+			<div class="fixing">
+				<div id="nc-menulong">
+					<div>
+						<button onclick="window.open('../../index.html', '_self')" aria-label="Homepage"
+							class="linksmenu">Homepage</button>
+						<button onclick="window.open('../../pages/team.html', '_self')" aria-label="Team"
+							class="linksmenu">Team</button>
+						<button onclick="window.open('../../pages/research.html', '_self')" aria-label="Research"
+							class="linksmenu">Research</button>
+						<button onclick="window.open('../../pages/publications.html', '_self')"
+							aria-label="Publications" class="linksmenu">Publications</button>
+						<button onclick="window.open('../../pages/news.html', '_self')" aria-label="News"
+							class="linksmenu">News</button>
+						<button onclick="window.open('../../pages/videos.html', '_self')" aria-label="Videos"
+							class="linksmenu">Videos</button>
+						<button onclick="window.open('../../pages/software/realmicrostructures.html', '_self')"
+							aria-label="Modelling" class="active linksmenu">Modelling</button>
+						<button onclick="window.open('../../pages/opportunities.html', '_self')"
+							aria-label="Opportunities" class="linksmenu">Opportunities</button>
+						<button onclick="window.open('../../pages/contact.html', '_self')" aria-label="Contact"
+							class="linksmenu">Contact</button>
+					</div>
+				</div>
+
+				<div id="nc-menu">
+					<div data-inclusive-menu>
+						<button data-inclusive-menu-opens="ncmenu" aria-label="Menu">&#9776;<span
+								aria-hidden="true"></span></button>
+						<div id="ncmenu" data-inclusive-menu-from="left">
+							<button onclick="window.open('../../index.html', '_self')" aria-label="Homepage"
+								class="linksmenu">Homepage</button>
+							<button onclick="window.open('../../pages/team.html', '_self')" aria-label="Team"
+								class="linksmenu">Team</button>
+							<button onclick="window.open('../../pages/research.html', '_self')" aria-label="Research"
+								class="active linksmenu">Research</button>
+							<button onclick="window.open('../../pages/publications.html', '_self')"
+								aria-label="Publications" class="linksmenu">Publications</button>
+							<button onclick="window.open('../../pages/news.html', '_self')" aria-label="News"
+								class="linksmenu">News</button>
+							<button onclick="window.open('../../pages/videos.html', '_self')" aria-label="Videos"
+								class="linksmenu">Videos</button>
+							<button onclick="window.open('../../pages/software/realmicrostructures.html', '_self')"
+								aria-label="Modelling" class="active linksmenu">Modelling</button>
+							<button onclick="window.open('../../pages/opportunities.html', '_self')"
+								aria-label="Opportunities" class="linksmenu">Opportunities</button>
+							<button onclick="window.open('../../pages/contact.html', '_self')" aria-label="Contact"
+								class="linksmenu">Contact</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- Main content ################################################################################################ -->
+	<main>
+		<div class="wrapper row3">
+			<!-- Section containing input panel and overall data visualisation -->
+			<div class="top-panel">
+				<!-- Input Panel -->
+				<div class="input-panel">
+					<!-- Title and file input selector -->
+					<div class="file-selector">
+						<h4>Fibre Selector</h4>
+
+						<label for="fileupload">
+							<p style="font-size: 10px;">Input csv file : </p>
+							<input type="textarea" id="example-data" name="example-data" value=get_example_data()>
+							<button id="submit-data" class="btn submit-csv" onclick=submitData()>
+						</label>
+
+					</div>
+
+					<!-- Metric inputs -->
+					<div class="metric-inputs">
+						<form target="blank_frame" name="metrics-1-form" onsubmit="displayMetrics1()">
+							<div class="slider-menu" id="slider-menu-1">
+								<h3 style="margin-left: 12px;">Selected Data 1</h3>
+								<label class="metric-label">Time Allowed (s)</label>
+								<div class="number-input">
+									<input type="number" name="time-1" required>
+								</div>
+								<label class="metric-label">Misalignment</label>
+								<div class="slider-item">
+									<input type="checkbox" name="misalignment-1-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="misalignment-1-slider">
+								</div>
+								<label class="metric-label">Average Tortuosity</label>
+								<div class="slider-item">
+									<input type="checkbox" name="aveTort-1-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="aveTort-1-slider">
+								</div>
+								<label class="metric-label">Max Local Tortuosity</label>
+								<div class="slider-item">
+									<input type="checkbox" name="maxTort-1-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="maxTort-1-slider">
+								</div>
+								<label class="metric-label">Fibre Volume Fraction</label>
+								<div class="slider-item">
+									<input type="checkbox" name="fibreVol-1-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="fibreVol-1-slider">
+								</div>
+								<label class="metric-label">Sample Radius</label>
+								<div class="number-input">
+									<input type="number" name="radius-1" value="20" required>
+								</div>
+								<label class="metric-label">Sample Height</label>
+								<div class="number-input">
+									<input type="number" name="height-1" value="50" required>
+								</div>
+								<input class="submit-metrics btn" name="metrics-1" type="submit" value="Run Search">
+								<p id="rerun-message-1" class="error-info"></p>
+							</div>
+						</form>
+						<form target="blank_frame" name="metrics-2-form" onsubmit="displayMetrics2()">
+							<div class="slider-menu" id="slider-menu-2">
+								<h3 style="margin-left: 12px;">Selected Data 2</h3>
+								<label class="metric-label">Time Allowed (s)</label>
+								<div class="number-input">
+									<input type="number" name="time-2" required>
+								</div>
+								<label class="metric-label">Misalignment</label>
+								<div class="slider-item">
+									<input type="checkbox" name="misalignment-2-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="misalignment-2-slider">
+								</div>
+								<label class="metric-label">Average Tortuosity</label>
+								<div class="slider-item">
+									<input type="checkbox" name="aveTort-2-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="aveTort-2-slider">
+								</div>
+								<label class="metric-label">Max Local Tortuosity</label>
+								<div class="slider-item">
+									<input type="checkbox" name="maxTort-2-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="maxTort-2-slider">
+								</div>
+								<label class="metric-label">Fibre Volume Fraction</label>
+								<div class="slider-item">
+									<input type="checkbox" name="fibreVol-2-check">
+									<input type="range" min="0" max="100" value="10" class="slider"
+										name="fibreVol-2-slider">
+								</div>
+								<label class="metric-label">Sample Radius</label>
+								<div class="number-input">
+									<input type="number" name="radius-2" value="20" required>
+								</div>
+								<label class="metric-label">Sample Height</label>
+								<div class="number-input">
+									<input type="number" name="height-2" value="50" required>
+								</div>
+								<input class="submit-metrics btn" name="metrics-2" type="submit" value="Run Search">
+								<p id="rerun-message-2" class="error-info"></p>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="p5-header">
+					Whole Dataset Visualisation
+					<div id="visualisationCanvas" class="p5-canvas"></div>
+				</div>
+				<div class="main-data-graphs">
+					<div>
+						<label for="mis-hist">Misalignment</label>
+						<div id="mis-hist" style="width:300px;height:250px;"></div>
+					</div>
+					<div>
+						<label for="tort-hist">Tortuosity</label>
+						<div id="tort-hist" style="width:300px;height:250px;"></div>
+					</div>
+					<div>
+						<label for="maxtort-hist">Max Tortuosity</label>
+						<div id="maxtort-hist" style="width:300px;height:250px;"></div>
+					</div>
+					<div>
+						<label for="vol-hist">Fibre Vol Frac</label>
+						<div id="vol-hist" style="width:300px;height:250px;"></div>
+					</div>
+				</div>
+			</div>
+
+			<button id="flatten-samples" class="btn">Project Samples To XY Plane?</button>
+
+			<!-- Section containing two canvases to display selected data -->
+			<div class="horizontal-panel">
+				<div class="data-display">
+					<label class="p5-header">
+						Selected Data 1
+						<div id="selectedData1" class="p5-canvas"></div>
+					</label>
+
+					<!-- Section containing metrics for the first sample. -->
+					<div class="data-value-display">
+						Misalignment :
+						<p id="mis-disp-1">0</p>
+						Ave Tortuosity :
+						<p id="tort-disp-1">0</p>
+						Max Local Tortuosity :
+						<p id="maxtort-disp-1">0</p>
+						Fibre Volume :
+						<p id="fibrevol-disp-1">0</p>
+						<button id="download-sample-1" class="btn"><i class="fa fa-download"></i> Download Sample
+							1</button>
+						<br>
+						<button id="stop-search-1" class="btn">Stop Search</button>
+						<br><br>
+						Status =
+						<br>
+						<p id="status-1">IDLE</p>
+					</div>
+				</div>
+
+				<div class="data-display">
+					<label class="p5-header">
+						Selected Data 2
+						<div id="selectedData2" class="p5-canvas"></div>
+					</label>
+					<!-- Section containing metrics for the second sample. -->
+					<div class="data-value-display">
+						Misalignment :
+						<p id="mis-disp-2">0</p>
+						Ave Tortuosity :
+						<p id="tort-disp-2">0</p>
+						Max Local Tortuosity :
+						<p id="maxtort-disp-2">0</p>
+						Fibre Volume :
+						<p id="fibrevol-disp-2">0</p>
+						<button id="download-sample-2" class="btn"><i class="fa fa-download"></i> Download Sample
+							2</button>
+						<br>
+						<button id="stop-search-2" class="btn">Stop Search</button>
+						<br><br>
+						Status =
+						<br>
+						<p id="status-2">IDLE</p>
+					</div>
+				</div>
+
+			</div>
+			<iframe name="blank_frame" id="blank_frame" style="display: none;"></iframe>
+		</div>
+
+		</div>
+	</main>
+
+	<!-- Footer ################################################################################################ -->
+	<footer>
+		<div class="wrapper row2">
+			<div class="fixing">
+				<div id="footer" class="clear">
+
+					<div class="one_quarter first">
+						<article>
+							<h2 class="footer_title">NextCOMP</h2>
+							<nav class="footer_nav">
+								<ul class="nospace">
+									<li><a href="../../index.html" aria-label="Homepage" title="Homepage">Homepage</a>
+									</li>
+									<li><a href="../../pages/team.html" aria-label="Team" title="Team">Team</a></li>
+									<li><a href="../../pages/research.html" aria-label="Research"
+											title="Research">Research</a></li>
+									<li><a href="../../pages/publications.html" aria-label="Publications"
+											title="Publications">Publications</a></li>
+									<li><a href="../../pages/news.html" aria-label="News" title="News">News</a></li>
+									<li><a href="../../pages/videos.html" aria-label="Videos" title="Videos">Videos</a>
+									</li>
+									<li><a href="../../pages/software/realmicrostructures.html" aria-label="Modelling"
+											title="Modelling">Modelling</a></li>
+									<li><a href="../../pages/opportunities.html" aria-label="Opportunities"
+											title="Opportunities">Opportunities</a></li>
+									<li><a href="../../pages/contact.html" aria-label="Contact"
+											title="Contact">Contact</a></li>
+									<li><a href="../../pages/accessibility.html" aria-label="Accessibility"
+											title="Accessibility">Accessibility</a></li>
+									<li><a href="../../cookiepolicy.html" aria-label="Cookie Policy"
+											title="Cookie Policy">Cookie Policy</a></li>
+									<li><a href="../../privacynotice.html" aria-label="Privacy Notice"
+											title="Privacy Notice">Privacy Notice</a></li>
+								</ul>
+							</nav>
+						</article>
+					</div>
+
+					<div class="one_quarter">
+						<article>
+							<h2 class="footer_title">Funding Grant</h2>
+							<ul class="list none">
+								<li>
+									<a href="https://gtr.ukri.org/projects?ref=EP%2FT011653%2F1"
+										aria-label="NextCOMP's UKRI Research Grant" target="_blank"><span
+											class="icon-file-alt"></span></a>
+									<a href="https://gtr.ukri.org/projects?ref=EP%2FT011653%2F1"
+										aria-label="NextCOMP's UKRI Research Grant" target="_blank">UKRI EPSRC
+										EP/T011653/1</a>
+								</li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="one_quarter">
+						<article>
+							<h2 class="footer_title">Principal Investigators</h2>
+							<ul class="list none nospace">
+								<li><a href="mailto:m.shaffer@imperial.ac.uk" aria-label="Email Milo Shaffer">Milo
+										Shaffer</a></li>
+								<li><a href="https://www.imperial.ac.uk" target="_blank"
+										aria-label="Imperial College London website">Imperial College London</a></li>
+								<li><a href="mailto:m.shaffer@imperial.ac.uk" aria-label="Email Milo Shaffer"><span
+											class="icon-envelope"></span></a>
+									<a href="https://www.imperial.ac.uk/people/m.shaffer" target="_blank"
+										aria-label="Milo Shaffer's ICL personal web page"><span
+											class="icon-globe"></span></a>
+								</li>
+							</ul>
+							<br>
+							<br>
+							<ul class="list none nospace">
+								<li><a href="mailto:r.s.trask@bristol.ac.uk">Richard Trask</a></li>
+								<li><a href="https://www.bristol.ac.uk" target="_blank"
+										aria-label="University of Bristol website">University of Bristol</a></li>
+								<li><a href="mailto:r.s.trask@bristol.ac.uk" aria-label="Email Richard Trask"><span
+											class="icon-envelope"></span></a>
+									<a href="https://twitter.com/rs_trask" target="_blank"
+										aria-label="Tweet Richard Trask"><span class="icon-twitter"></span></a>
+									<a href="https://www.linkedin.com/in/richard-trask-27242213" target="_blank"
+										aria-label="LinkedIn Richard Trask"><span class="icon-linkedin"></span></a>
+									<a href="https://www.bristol.ac.uk/people/person/Richard-Trask-c52578e5-4bb9-4390-b1cc-c7c04f84bac2/"
+										target="_blank" aria-label="Richard Trask's UoB personal web page"><span
+											class="icon-globe"></span></a>
+								</li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="one_quarter">
+						<article>
+							<h2 class="footer_title">General Enquiries</h2>
+							<ul class="list none nospace spacing">
+								<li><a href="mailto:info@nextcomp.ac.uk" aria-label="Contact NextCOMP"><span
+											class="icon-envelope"></span></a> <a
+										href="mailto:info@nextcomp.ac.uk">Contact NextCOMP</a></li>
+								<li><a href="https://twitter.com/NextCOMP_ac_uk" target="_blank"
+										aria-label="Tweet NextCOMP"><span class="icon-twitter"></span></a> <a
+										href="https://twitter.com/NextCOMP_ac_uk" target="_blank">@NextCOMP_ac_uk</a>
+								</li>
+								<li><a href="https://www.linkedin.com/groups/8968232" target="_blank"
+										aria-label="LinkedIn NextCOMP"><span class="icon-linkedin"></span></a> <a
+										href="https://www.linkedin.com/groups/8968232" target="_blank">NextCOMP LinkedIn
+										Group</a></li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrapper row4">
+			<div class="fixing">
+				<div id="copyright" class="clear">
+					<p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a
+							href="https://www.nextcomp.ac.uk">NEXTCOMP.AC.UK</a>
+					</p>
+					<p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com"
+							aria-label="OS Templates website" title="Free Website Templates">OS Templates</a> with
+						additional scripts from
+						<a target="_blank" href="https://www.labnol.org" aria-label="Labnol.org website"
+							title="Labnol Light Youtube plugin">Labnol.org</a>,
+						<a target="_blank" href="https://noelboss.github.io/featherlight"
+							aria-label="Featherlight plugin wesbite" title="Featherlight plugin">Featherlight</a>,
+						<a target="_blank" href="https://owlcarousel2.github.io/OwlCarousel2"
+							aria-label="Owl Carousel 2 plugin wesbite" title="Owl Carousel 2 plugin">Owl Carousel 2</a>,
+						<a target="_blank" href="https://github.com/Heydon/inclusive-menu-button"
+							aria-label="Inclusive Menu Button plugin website"
+							title="Inclusive Menu Button plugin">Inclusive Menu Button</a>, and
+						<a target="_blank" href="https://www.w3schools.com/" aria-label="W3Schools scripts website"
+							title="W3Schools scripts">W3Schools.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Script ################################################################################################ -->
+	<script>
+		// Instantiation
+		var exampleButton = document.querySelector('[data-inclusive-menu-opens]')
+		var exampleMenuButton = new MenuButton(exampleButton, { checkable: 'one' })
+
+		// Listen to choose event
+		exampleMenuButton.on('choose', function (choice) {
+			console.log('You chose "' + choice.textContent + '"')
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+== TOOD ==
+
+- Look into parallelising the p5 image generation
+- Make a list of all p5 functions I use
+- Reduce length of p5 source file to increase loading times by only incl functions webapp needs
